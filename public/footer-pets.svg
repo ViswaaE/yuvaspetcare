@@ -1,0 +1,21 @@
+<svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .pet-outline {
+      fill: none;
+      stroke: #94A3B8; /* Corresponds to Tailwind's slate-400 */
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+  <path class="pet-outline" d="M 75,90 C 70,70 50,70 45,90 L 48,95 L 72,95 L 75,90 Z" />
+  <path class="pet-outline" d="M 60,72 m -18,0 a 18,18 0 1,0 36,0 a 18,18 0 1,0 -36,0" />
+  <path class="pet-outline" d="M 50,55 L 45,45 M 70,55 L 75,45" />
+  <circle cx="54" cy="68" r="1.5" fill="#94A3B8" />
+  <circle cx="66" cy="68" r="1.5" fill="#94A3B8" />
+  <path class="pet-outline" d="M 60,75 a 5,5 0 0,0 0,5 a 5,5 0 0,0 0,-5" />
+  <path class="pet-outline" d="M 35,90 C 40,70 20,70 25,90 L 28,95 L 42,95 L 35,90 Z" />
+  <path class="pet-outline" d="M 30,72 m -18,0 a 18,18 0 1,0 36,0 a 18,18 0 1,0 -36,0" />
+  <path class="pet-outline" d="M 20,55 L 15,45 L 25,50 Z M 40,55 L 45,45 L 35,50 Z" />
+  <path class="pet-outline" d="M 24,68 L 28,68 M 32,68 L 36,68 M 30,75 L 30,80" />
+</svg>
