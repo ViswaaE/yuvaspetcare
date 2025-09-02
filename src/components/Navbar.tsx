@@ -9,12 +9,12 @@ import { FaChevronDown, FaSearch, FaPaw, FaBars, FaTimes } from 'react-icons/fa'
 
 // Data for navigation links (no changes here)
 const navLinks = [
-    { name: 'HOME', href: '#', hasDropdown: false },
-    { name: 'ABOUT US', href: '#', hasDropdown: false },
+    { name: 'HOME', href: '/', hasDropdown: false },
+    { name: 'ABOUT US', href: '/Aboutus', hasDropdown: false },
     { name: 'PORTFOLIO', href: '#', hasDropdown: false },
     { name: 'OUR SERVICES', href: '#', hasDropdown: false },
     { name: 'BLOG', href: '#', hasDropdown: false },
-    { name: 'CONTACT US', href: '#', hasDropdown: false },
+    { name: 'CONTACT US', href: '/ContactUs', hasDropdown: false },
 ];
 
 // Reusable component for the logo (no changes here)
