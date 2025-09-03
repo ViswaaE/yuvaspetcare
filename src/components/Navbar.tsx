@@ -12,7 +12,7 @@ const navLinks = [
     { name: 'HOME', href: '/', hasDropdown: false },
     { name: 'ABOUT US', href: '/Aboutus', hasDropdown: false },
     { name: 'PORTFOLIO', href: '#', hasDropdown: false },
-    { name: 'OUR SERVICES', href: '#', hasDropdown: false },
+    { name: 'OUR SERVICES', href: '/Ourservices', hasDropdown: false },
     { name: 'BLOG', href: '#', hasDropdown: false },
     { name: 'CONTACT US', href: '/ContactUs', hasDropdown: false },
 ];
