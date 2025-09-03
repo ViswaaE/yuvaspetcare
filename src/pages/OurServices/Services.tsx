@@ -45,20 +45,20 @@ const servicesData: Service[] = [
 const ReadMoreButton: React.FC = () => (
   <div className="relative group/button">
     {/* Center rectangle */}
-    <div className="bg-orange-500 text-white font-bold py-3 px-8 rounded-full z-10 shadow-lg transition-all duration-300">
+    <div className="bg-orange-500 text-white font-bold py-2 px-5 rounded-full z-10 shadow-lg transition-all duration-300">
       READ MORE
     </div>
 
     {/* Left side circles */}
-    <div className="absolute top-1/2 left-0 -translate-x-1/4 -translate-y-1/2 flex flex-col space-y-1 transition-transform duration-300 transform scale-0 group-hover/button:scale-100 origin-right">
-      <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
-      <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
+    <div className="absolute top-1/2 left-0 -translate-x-1/4 -translate-y-1/2 flex flex-col transition-transform duration-300 transform scale-0 group-hover/button:scale-100 origin-right">
+      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
+      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
     </div>
     
     {/* Right side circles */}
-    <div className="absolute top-1/2 right-0 translate-x-1/4 -translate-y-1/2 flex flex-col space-y-1 transition-transform duration-300 transform scale-0 group-hover/button:scale-100 origin-left">
-      <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
-      <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
+    <div className="absolute top-1/2 right-0 translate-x-1/4 -translate-y-1/2 flex flex-col transition-transform duration-300 transform scale-0 group-hover/button:scale-100 origin-left">
+      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
+      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
     </div>
   </div>
 );
