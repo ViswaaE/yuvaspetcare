@@ -1,30 +1,43 @@
 // components/Navbar.tsx
 
-'use client'; // This directive is needed for state and effects (useState, useEffect)
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaChevronDown, FaSearch, FaPaw, FaBars, FaTimes } from 'react-icons/fa';
+// UPDATED: Imported new icons for the dropdown
+import {
+    FaChevronDown, FaSearch, FaPaw, FaBars, FaTimes,
+    FaStethoscope, FaBriefcaseMedical, FaShoppingBasket
+} from 'react-icons/fa';
 
-// Data for navigation links (no changes here)
+// --- 1. UPDATED DATA STRUCTURE WITH ICONS ---
 const navLinks = [
     { name: 'HOME', href: '/', hasDropdown: false },
     { name: 'ABOUT US', href: '/Aboutus', hasDropdown: false },
     { name: 'PORTFOLIO', href: '#', hasDropdown: false },
-    { name: 'OUR SERVICES', href: '/Ourservices', hasDropdown: false },
+    {
+        name: 'SERVICES',
+        href: '/Ourservices',
+        hasDropdown: true,
+        dropdownItems: [
+            // Each item now has an icon property
+            { name: 'Diseases', href: '/diseases', icon: <FaStethoscope /> },
+            { name: 'Treatment', href: '/treatment', icon: <FaBriefcaseMedical /> },
+            { name: 'Products', href: '/Products', icon: <FaShoppingBasket /> },
+        ]
+    },
     { name: 'BLOG', href: '#', hasDropdown: false },
     { name: 'CONTACT US', href: '/ContactUs', hasDropdown: false },
 ];
 
-// Reusable component for the logo (no changes here)
+// Reusable components (no changes here)
 const Logo = () => (
     <Link href="/" className="flex items-center ml-14 flex-shrink-0">
         <Image src="/logo.jpeg" alt="Petzorg Logo" width={80} height={80} />
     </Link>
 );
 
-// Reusable component for the main button (no chang es here)
 const AppointmentButton = () => (
     <button className="bg-orange-400 text-white font-bold rounded-full py-3 px-5 flex items-center gap-x-2.5 hover:bg-orange-500 transition-colors duration-300 whitespace-nowrap">
         <span>APPOINTMENT</span>
@@ -37,19 +50,22 @@ const AppointmentButton = () => (
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-    // ENHANCEMENT: Lock body scroll when the mobile menu is open for better UX
     useEffect(() => {
         if (isMobileMenuOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'auto';
         }
-        // Cleanup function to ensure scroll is restored if the component unmounts
         return () => {
             document.body.style.overflow = 'auto';
         };
     }, [isMobileMenuOpen]);
+
+    const handleMobileDropdownToggle = (name: string) => {
+        setOpenDropdown(openDropdown === name ? null : name);
+    };
 
     return (
         <nav className="bg-white shadow-sm w-full sticky top-0 z-50">
@@ -59,10 +75,12 @@ const Navbar = () => {
                     <Logo />
 
                     {/* --- DESKTOP NAVIGATION --- */}
-                    {/* 'hidden' makes this disappear on mobile. 'lg:flex' makes it appear on large screens. */}
                     <ul className="hidden lg:flex items-center gap-x-8">
                         {navLinks.map((link) => (
-                            <li key={link.name}>
+                            // --- 2. IMPROVED HOVER ACCESS ---
+                            // Added pb-4 (padding-bottom) to create an "invisible bridge" for the cursor,
+                            // preventing the dropdown from disappearing accidentally.
+                            <li key={link.name} className="relative group pb-4 -mb-4">
                                 <Link
                                     href={link.href}
                                     className="flex items-center font-semibold text-zinc-700 transition-colors duration-300 hover:text-orange-500"
@@ -70,45 +88,85 @@ const Navbar = () => {
                                     {link.name}
                                     {link.hasDropdown && <FaChevronDown className="ml-1.5 text-xs" />}
                                 </Link>
+
+                                {/* Desktop Dropdown Menu with Icons */}
+                                {link.hasDropdown && link.dropdownItems && (
+                                    <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-4 py-2 w-52 z-10">
+                                        {link.dropdownItems.map((item) => (
+                                            <Link
+                                                key={item.name}
+                                                href={item.href}
+                                                className="flex items-center gap-x-3 px-4 py-2 text-sm text-zinc-700 hover:bg-orange-100 hover:text-orange-600 transition-colors"
+                                            >
+                                                <span className="text-orange-500">{item.icon}</span>
+                                                <span>{item.name}</span>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
                             </li>
                         ))}
                     </ul>
 
-                    {/* --- DESKTOP ACTIONS (Search & Button) --- */}
-                    {/* Also hidden on mobile, shown on large screens */}
+                    {/* Desktop Actions */}
                     <div className="hidden lg:flex items-center gap-x-6">
                         <FaSearch className="text-zinc-600 text-xl cursor-pointer hover:text-orange-500 transition-colors" />
-                        <AppointmentButton />   
+                        <AppointmentButton />
                     </div>
 
-                    {/* --- MOBILE MENU BUTTON (Hamburger) --- */}
-                    {/* 'lg:hidden' shows this ONLY on screens smaller than large */}
+                    {/* Mobile Menu Button */}
                     <div className="lg:hidden">
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             aria-label="Toggle menu"
                         >
                             {isMobileMenuOpen ? (
-                                <FaTimes className="text-2xl text-zinc-700" /> // Close icon
+                                <FaTimes className="text-2xl text-zinc-700" />
                             ) : (
-                                <FaBars className="text-2xl text-zinc-700" /> // Hamburger icon
+                                <FaBars className="text-2xl text-zinc-700" />
                             )}
                         </button>
                     </div>
                 </div>
             </div>
 
-            {/* --- MOBILE MENU (Dropdown) --- */}
-            {/* This entire block is rendered only if 'isMobileMenuOpen' is true */}
+            {/* --- MOBILE MENU WITH ICONS --- */}
             {isMobileMenuOpen && (
                 <div className="lg:hidden bg-white border-t border-zinc-200">
                     <ul className="flex flex-col px-4">
                         {navLinks.map((link) => (
                             <li key={link.name} className="border-b border-zinc-100">
-                                <Link href={link.href} className="py-3 flex justify-between items-center text-zinc-700 hover:text-orange-500">
-                                    {link.name}
-                                    {link.hasDropdown && <FaChevronDown className="text-xs" />}
-                                </Link>
+                                {link.hasDropdown ? (
+                                    <>
+                                        <button
+                                            onClick={() => handleMobileDropdownToggle(link.name)}
+                                            className="py-3 w-full flex justify-between items-center text-zinc-700 font-medium hover:text-orange-500"
+                                        >
+                                            {link.name}
+                                            <FaChevronDown className={`text-xs transition-transform ${openDropdown === link.name ? 'rotate-180' : ''}`} />
+                                        </button>
+
+                                        {openDropdown === link.name && link.dropdownItems && (
+                                            <div className="pb-2 pl-4">
+                                                {link.dropdownItems.map((item) => (
+                                                    <Link
+                                                        key={item.name}
+                                                        href={item.href}
+                                                        className="flex items-center gap-x-3 py-2 text-zinc-600 hover:text-orange-500"
+                                                        onClick={() => setIsMobileMenuOpen(false)}
+                                                    >
+                                                        <span className="text-orange-500">{item.icon}</span>
+                                                        <span>{item.name}</span>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </>
+                                ) : (
+                                    <Link href={link.href} className="py-3 block text-zinc-700 font-medium hover:text-orange-500">
+                                        {link.name}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>
