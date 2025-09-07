@@ -1,6 +1,7 @@
 // components/ProductGrid.tsx
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Define the type for a single product for type safety
 type Product = {
@@ -35,7 +36,9 @@ function ProductCard({ product }: ProductCardProps) {
   const isSale = !!product.salePrice;
 
   return (
+
     <div className="group relative text-center border border-gray-200 rounded-lg p-4 transition-shadow duration-300 hover:shadow-xl">
+
       <div className="relative bg-gray-50 rounded-md">
         {/* Sale Badge */}
         {isSale && (
@@ -45,6 +48,7 @@ function ProductCard({ product }: ProductCardProps) {
         )}
 
         {/* Product Image */}
+
         <Image
           src={product.imageUrl}
           alt={product.name}
@@ -53,31 +57,32 @@ function ProductCard({ product }: ProductCardProps) {
           className="mx-auto transition-opacity duration-300 group-hover:opacity-60"
         />
 
-        {/* Add to Cart Button (visible on hover) */}
-        {/* This logic specifically targets the blurred card example from the image */}
-        {product.id === 6 && (
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="bg-orange-500 text-white font-bold py-2 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform">
-                    ADD TO CART
-                </button>
-            </div>
-        )}
+
+
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <button className="bg-orange-500 text-white font-bold py-2 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform">
+            ADD TO CART
+          </button>
+        </div>
       </div>
 
       {/* Product Info */}
-      <div className="mt-4">
-        <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
-        <p className="mt-2 text-md">
-          {isSale ? (
-            <>
-              <span className="text-gray-400 line-through mr-2">${product.price.toFixed(2)}</span>
-              <span className="font-bold text-orange-600">${product.salePrice?.toFixed(2)}</span>
-            </>
-          ) : (
-            <span className="font-bold text-gray-700">${product.price.toFixed(2)}</span>
-          )}
-        </p>
-      </div>
+      <Link href="/Products-detail">
+        <div className="mt-4">
+          <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
+          <p className="mt-2 text-md">
+            {isSale ? (
+              <>
+                <span className="text-gray-400 line-through mr-2">${product.price.toFixed(2)}</span>
+                <span className="font-bold text-orange-600">${product.salePrice?.toFixed(2)}</span>
+              </>
+            ) : (
+              <span className="font-bold text-gray-700">${product.price.toFixed(2)}</span>
+            )}
+          </p>
+        </div>
+      </Link>
+
     </div>
   );
 }
@@ -87,7 +92,7 @@ function ProductCard({ product }: ProductCardProps) {
 
 export default function ProductGrid() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto my-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
