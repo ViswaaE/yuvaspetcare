@@ -23,7 +23,7 @@ const HeroSection = () => {
             {/* --- Desktop Image --- */}
             {/* This image is hidden by default and becomes visible on medium screens and larger (md:block) */}
             <Image
-                src="/dog.jpg" // <-- Your original image for desktop
+                src="/heroimg.png" // <-- Your original image for desktop
                 alt="A cute puppy being held"
                 layout="fill"
                 objectFit="cover"
