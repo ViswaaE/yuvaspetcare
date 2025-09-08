@@ -15,7 +15,7 @@ import {
 const navLinks = [
     { name: 'HOME', href: '/', hasDropdown: false },
     { name: 'ABOUT US', href: '/Aboutus', hasDropdown: false },
-    { name: 'PORTFOLIO', href: '#', hasDropdown: false },
+    { name: 'PORTFOLIO', href: '/Portfolio', hasDropdown: false },
     {
         name: 'SERVICES',
         href: '/Ourservices',
@@ -23,7 +23,7 @@ const navLinks = [
         dropdownItems: [
             // Each item now has an icon property
             { name: 'Diseases', href: '/diseases', icon: <FaStethoscope /> },
-            { name: 'Treatment', href: '/treatment', icon: <FaBriefcaseMedical /> },
+            { name: 'Veterinary Care', href: '/Veterinary-Care', icon: <FaBriefcaseMedical /> },
             { name: 'Products', href: '/Products', icon: <FaShoppingBasket /> },
         ]
     },

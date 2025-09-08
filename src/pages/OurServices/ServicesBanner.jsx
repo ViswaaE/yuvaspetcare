@@ -27,7 +27,7 @@ const ServicesBanner = () => {
         <div className="flex items-center gap-4 mb-6">
             <BoneIcon />
             <h1 className="text-5xl md:text-6xl font-bold text-white tracking-wide">
-                Our Services
+                Veterinary Care
             </h1>
         </div>
         <nav aria-label="Breadcrumb">
@@ -37,7 +37,7 @@ const ServicesBanner = () => {
             </li>
             <li className="mx-2" aria-hidden="true">&rsaquo;</li>
             <li>
-              <span className="text-gray-400">Our Services</span>
+              <span className="text-gray-400">Veterinary Care</span>
             </li>
           </ol>
         </nav>
