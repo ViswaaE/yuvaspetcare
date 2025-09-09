@@ -87,7 +87,7 @@ const FaqComponent = () => {
           {/* Left Section */}
           <div className="flex flex-col">
              <div className="flex items-center gap-2 mb-4">
-                <span className="text-orange-500 font-semibold text-sm">Feel free to ask details</span>
+                <span className="text-emerald-500 font-semibold text-sm">Feel free to ask details</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
              </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-8">

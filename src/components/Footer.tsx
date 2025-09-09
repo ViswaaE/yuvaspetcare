@@ -34,7 +34,7 @@ const Footer = () => {
   // Reusable component for list items to avoid repetition
   const ListLink = ({ children }: { children: React.ReactNode }) => (
     <li className="flex items-center mb-2">
-      <span className="bg-orange-500 rounded-full w-1.5 h-1.5 block mr-3 flex-shrink-0"></span>
+      <span className="bg-emerald-500 rounded-full w-1.5 h-1.5 block mr-3 flex-shrink-0"></span>
       <a href="#" className="hover:text-white transition-colors duration-300">
         {children}
       </a>
@@ -49,7 +49,7 @@ const Footer = () => {
           
           {/* Column 1: About & Newsletter */}
           <div>
-            <h2 className="text-white text-3xl font-extrabold mb-2 tracking-wide">DRVETS</h2>
+            <h2 className="text-white text-3xl font-extrabold mb-2 tracking-wide">YuvasPetCare</h2>
             <p className="text-sm mb-6 leading-relaxed">
               Where every wag, purr, and chirp matters. We provide compassionate, expert care to ensure your beloved pets live their happiest, healthiest lives.
             </p>
@@ -57,12 +57,12 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Your Email Address"
-                className="bg-zinc-700/50 border border-zinc-600 rounded-full w-full py-3 pl-5 pr-14 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition-colors"
+                className="bg-zinc-700/50 border border-zinc-600 rounded-full w-full py-3 pl-5 pr-14 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 transition-colors"
               />
               <button 
                 type="submit"
                 aria-label="Subscribe"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 bg-orange-500 text-white rounded-full p-2.5 hover:bg-orange-600 transition-colors duration-300"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 bg-emerald-500 text-white rounded-full p-2.5 hover:bg-emerald-600 transition-colors duration-300"
               >
                 <FaPaperPlane />
               </button>
@@ -107,9 +107,9 @@ const Footer = () => {
         <div className="mt-16 pt-6 border-t border-zinc-700 flex flex-col-reverse md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-center md:text-left">&copy; Copyright 2024. All Rights Reserved. Designed by Petzorg.</p>
           <div className="flex items-center gap-x-3">
-            <a href="#" aria-label="Facebook" className="bg-orange-500/80 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-orange-500 transition-colors"><FaFacebookF /></a>
-            <a href="#" aria-label="Instagram" className="bg-orange-500/80 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-orange-500 transition-colors"><FaInstagram /></a>
-            <a href="#" aria-label="Twitter" className="bg-orange-500/80 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-orange-500 transition-colors"><FaXTwitter /></a>
+            <a href="#" aria-label="Facebook" className="bg-emerald-500/80 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-emerald-500 transition-colors"><FaFacebookF /></a>
+            <a href="#" aria-label="Instagram" className="bg-emerald-500/80 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-emerald-500 transition-colors"><FaInstagram /></a>
+            <a href="#" aria-label="Twitter" className="bg-emerald-500/80 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-emerald-500 transition-colors"><FaXTwitter /></a>
           </div>
         </div>
       </div>
