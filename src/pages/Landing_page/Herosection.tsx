@@ -12,7 +12,7 @@ const HeroSection = () => {
             {/* --- Mobile Image --- */}
             {/* This image is visible by default and gets hidden on medium screens and larger (md:hidden) */}
             <Image
-                src="/dog2.jpg" // <-- Your image optimized for mobile
+                src="/heroimg.png" // <-- Your image optimized for mobile
                 alt="A cute puppy being held"
                 layout="fill"
                 objectFit="cover"
