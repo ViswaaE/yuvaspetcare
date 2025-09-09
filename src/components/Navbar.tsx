@@ -39,9 +39,9 @@ const Logo = () => (
 );
 
 const AppointmentButton = () => (
-    <button className="bg-orange-400 text-white font-bold rounded-full py-3 px-5 flex items-center gap-x-2.5 hover:bg-orange-500 transition-colors duration-300 whitespace-nowrap">
+    <button className="bg-emerald-400 text-white font-bold rounded-full py-3 px-5 flex items-center gap-x-2.5 hover:bg-emerald-500 transition-colors duration-300 whitespace-nowrap">
         <span>APPOINTMENT</span>
-        <div className="bg-white text-orange-400 rounded-full p-1">
+        <div className="bg-white text-emerald-400 rounded-full p-1">
             <FaPaw className="text-sm" />
         </div>
     </button>
@@ -83,7 +83,7 @@ const Navbar = () => {
                             <li key={link.name} className="relative group pb-4 -mb-4">
                                 <Link
                                     href={link.href}
-                                    className="flex items-center font-semibold text-zinc-700 transition-colors duration-300 hover:text-orange-500"
+                                    className="flex items-center font-semibold text-black-700 transition-colors duration-300 hover:text-emerald-500"
                                 >
                                     {link.name}
                                     {link.hasDropdown && <FaChevronDown className="ml-1.5 text-xs" />}
@@ -96,9 +96,9 @@ const Navbar = () => {
                                             <Link
                                                 key={item.name}
                                                 href={item.href}
-                                                className="flex items-center gap-x-3 px-4 py-2 text-sm text-zinc-700 hover:bg-orange-100 hover:text-orange-600 transition-colors"
+                                                className="flex items-center gap-x-3 px-4 py-2 text-sm text-black-700 hover:bg-emerald-100 hover:text-emerald-600 transition-colors"
                                             >
-                                                <span className="text-orange-500">{item.icon}</span>
+                                                <span className="text-emerald-500">{item.icon}</span>
                                                 <span>{item.name}</span>
                                             </Link>
                                         ))}
@@ -110,7 +110,7 @@ const Navbar = () => {
 
                     {/* Desktop Actions */}
                     <div className="hidden lg:flex items-center gap-x-6">
-                        <FaSearch className="text-zinc-600 text-xl cursor-pointer hover:text-orange-500 transition-colors" />
+                        <FaSearch className="text-black-600 text-xl cursor-pointer hover:text-emerald-500 transition-colors" />
                         <AppointmentButton />
                     </div>
 
@@ -121,9 +121,9 @@ const Navbar = () => {
                             aria-label="Toggle menu"
                         >
                             {isMobileMenuOpen ? (
-                                <FaTimes className="text-2xl text-zinc-700" />
+                                <FaTimes className="text-2xl text-black-700" />
                             ) : (
-                                <FaBars className="text-2xl text-zinc-700" />
+                                <FaBars className="text-2xl text-black-700" />
                             )}
                         </button>
                     </div>
@@ -132,15 +132,15 @@ const Navbar = () => {
 
             {/* --- MOBILE MENU WITH ICONS --- */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden bg-white border-t border-zinc-200">
+                <div className="lg:hidden bg-white border-t border-black-200">
                     <ul className="flex flex-col px-4">
                         {navLinks.map((link) => (
-                            <li key={link.name} className="border-b border-zinc-100">
+                            <li key={link.name} className="border-b border-black-100">
                                 {link.hasDropdown ? (
                                     <>
                                         <button
                                             onClick={() => handleMobileDropdownToggle(link.name)}
-                                            className="py-3 w-full flex justify-between items-center text-zinc-700 font-medium hover:text-orange-500"
+                                            className="py-3 w-full flex justify-between items-center text-black-700 font-medium hover:text-emerald-500"
                                         >
                                             {link.name}
                                             <FaChevronDown className={`text-xs transition-transform ${openDropdown === link.name ? 'rotate-180' : ''}`} />
@@ -152,10 +152,10 @@ const Navbar = () => {
                                                     <Link
                                                         key={item.name}
                                                         href={item.href}
-                                                        className="flex items-center gap-x-3 py-2 text-zinc-600 hover:text-orange-500"
+                                                        className="flex items-center gap-x-3 py-2 text-black-600 hover:text-emerald-500"
                                                         onClick={() => setIsMobileMenuOpen(false)}
                                                     >
-                                                        <span className="text-orange-500">{item.icon}</span>
+                                                        <span className="text-emerald-500">{item.icon}</span>
                                                         <span>{item.name}</span>
                                                     </Link>
                                                 ))}
@@ -163,14 +163,14 @@ const Navbar = () => {
                                         )}
                                     </>
                                 ) : (
-                                    <Link href={link.href} className="py-3 block text-zinc-700 font-medium hover:text-orange-500">
+                                    <Link href={link.href} className="py-3 block text-black-700 font-medium hover:text-emerald-500">
                                         {link.name}
                                     </Link>
                                 )}
                             </li>
                         ))}
                     </ul>
-                    <div className='p-4 border-t border-zinc-100'>
+                    <div className='p-4 border-t border-black-100'>
                         <AppointmentButton />
                     </div>
                 </div>
