@@ -40,12 +40,12 @@ const HeroSection = () => {
                         {/* Mobile Version (Visible by default, hidden on medium screens up) */}
                         <div className="md:hidden flex flex-col items-center">
                             <div className="bg-white/20 p-2 rounded-full mb-2">
-                                <FaPaw className="text-orange-400 text-xl" />
+                                <FaPaw className="text-emerald-400 text-xl" />
                             </div>
-                            <p className="font-semibold text-orange-400">Welcome to Petzorg</p>
+                            <p className="font-semibold text-emerald-400">Welcome to Petzorg</p>
                         </div>
                         {/* Desktop Version (Hidden by default, visible on medium screens up) */}
-                        <div className="hidden md:inline-block bg-white/10 text-orange-400 text-sm font-semibold px-4 py-1 rounded-md">
+                        <div className="hidden md:inline-block bg-white/10 text-emerald-400 text-sm font-semibold px-4 py-1 rounded-md">
                             Welcome to Petzorg
                         </div>
                     </div>
@@ -59,9 +59,9 @@ const HeroSection = () => {
                     <div className="mt-8">
                         {/* Mobile Version */}
                         <Link href="/contact" passHref>
-                            <button className="md:hidden bg-orange-500 text-white font-bold rounded-full py-3 px-6 flex items-center gap-x-3 hover:bg-orange-600 transition-colors duration-300 shadow-lg">
+                            <button className="md:hidden bg-emerald-500 text-white font-bold rounded-full py-3 px-6 flex items-center gap-x-3 hover:bg-emerald-600 transition-colors duration-300 shadow-lg">
                                 <span>CONTACT US</span>
-                                <div className="bg-white text-orange-500 rounded-full p-1.5">
+                                <div className="bg-white text-emerald-500 rounded-full p-1.5">
                                     <FaPaw className="text-md" />
                                 </div>
                             </button>

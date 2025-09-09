@@ -24,7 +24,7 @@ const ArrowIcon = () => (
 
 const TestimonialSection = () => {
   return (
-    <section className="bg-white font-sans py-16 lg:py-24">
+    <section className="bg-gray-50 font-sans py-16 lg:py-24">
       <div className="container mx-auto max-w-7xl px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
           {/* Image 1 */}
@@ -38,11 +38,11 @@ const TestimonialSection = () => {
           </div>
 
           {/* Testimonial Card */}
-          <div className="bg-orange-50 p-6 rounded-lg shadow-md flex flex-col justify-center h-64">
+          <div className="bg-emerald-50 p-6 rounded-lg shadow-md flex flex-col justify-center h-64">
             <p className="text-gray-600 text-sm mb-4">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has...
             </p>
-            <div className="flex text-yellow-400 mb-6">
+            <div className="flex text-emerald-400 mb-6">
               <StarIcon />
               <StarIcon />
               <StarIcon />
@@ -51,7 +51,7 @@ const TestimonialSection = () => {
             </div>
             <div className="flex items-center">
                 <div className="w-1/3 h-1.5 bg-gray-700 rounded-full"></div>
-                <div className="w-2/3 h-1.5 bg-yellow-400 rounded-full -ml-1"></div>
+                <div className="w-2/3 h-1.5 bg-emerald-400 rounded-full -ml-1"></div>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ const TestimonialSection = () => {
                 <img className="w-12 h-12 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" alt="User 1" />
                 <img className="w-12 h-12 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop" alt="User 2" />
                 <img className="w-12 h-12 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" alt="User 3" />
-                <div className="w-12 h-12 rounded-full bg-orange-400 flex items-center justify-center border-2 border-white">
+                <div className="w-12 h-12 rounded-full bg-emerald-400 flex items-center justify-center border-2 border-white">
                     <ArrowIcon />
                 </div>
             </div>
@@ -87,9 +87,9 @@ const TestimonialSection = () => {
         {/* Quote */}
         <div className="text-center mt-16">
           <p className="text-gray-500 text-sm italic">
-            <span className="text-orange-400 font-bold mx-2">&diams;</span>
+            <span className="text-emerald-400 font-bold mx-2">&diams;</span>
             "Pets are not our whole life, but they make our lives whole."
-            <span className="text-orange-400 font-bold mx-2">&diams;</span>
+            <span className="text-emerald-400 font-bold mx-2">&diams;</span>
           </p>
         </div>
       </div>

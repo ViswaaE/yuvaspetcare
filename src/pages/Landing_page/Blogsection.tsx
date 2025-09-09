@@ -55,7 +55,7 @@ const BlogPostCard = ({ post }: { post: typeof blogPosts[0] }) => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{post.title}</h3>
                 <p className="text-gray-600 text-sm mb-6 leading-relaxed">{post.description}</p>
-                <button className="bg-orange-400 text-white text-xs font-bold py-2 px-5 rounded-md hover:bg-orange-500 transition-colors">
+                <button className="bg-emerald-400 text-blue text-xs font-bold py-2 px-5 rounded-md hover:bg-emerald-500 transition-colors">
                     READ MORE
                 </button>
             </div>
@@ -67,15 +67,15 @@ const BlogPostCard = ({ post }: { post: typeof blogPosts[0] }) => {
 // Main Blog Section Component
 const BlogSection = () => {
   return (
-    <section className="bg-gray-50 font-sans py-16 lg:py-24">
+    <section className="bg-blue-50 font-sans py-16 lg:py-24">
       <div className="container mx-auto max-w-7xl px-8">
         {/* Header */}
         <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-2 mb-2">
-                <span className="text-orange-500 font-semibold text-sm">Latest News and Updates</span>
+                <span className="text-emerald-500 font-semibold text-sm">Latest News and Updates</span>
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800">
+            <h2 className="text-4xl lg:text-5xl font-bold text-blue-800">
                 Current News & Blog Posts
             </h2>
         </div>

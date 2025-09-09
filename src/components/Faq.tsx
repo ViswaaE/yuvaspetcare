@@ -81,7 +81,7 @@ const FaqComponent = () => {
   };
 
   return (
-    <div className="bg-white font-sans p-8 lg:p-16">
+    <div className="bg-blue-50 font-sans p-8 lg:p-16">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           {/* Left Section */}
