@@ -1,29 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         drvets: {
-          green: {
-            DEFAULT: "#2E7D32", // Primary Green
-            light: "#66BB6A",   // Light Green
-          },
-          blue: {
-            DEFAULT: "#1976D2", // Primary Blue
-            light: "#64B5F6",   // Light Blue
-          },
-          teal: "#26A69A",      // Accent
-          neutral: {
-            dark: "#333333",
-            light: "#F5F5F5",
-            white: "#FFFFFF",
-          },
+          green: "#1ABC9C",   // Primary Green (fresh, trustful)
+          blue: "#3498DB",    // Primary Blue (professional, calm)
+          dark: "#2C3E50",    // Dark Navy (headers, footer)
+          light: "#ECF0F1",   // Light Gray (background)
+          accent: "#16A085",  // Teal Accent
         },
       },
     },

@@ -23,7 +23,7 @@ const SocialLink = ({ href, icon: Icon }: SocialLinkProps) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="bg-white text-[#212121] rounded-full p-2 text-xs hover:bg-orange-500 hover:text-white transition-colors duration-300"
+    className="bg-white text-[#212121] rounded-full p-2 text-xs hover:bg-emerald-500 hover:text-white transition-colors duration-300"
   >
     <Icon />
   </a>
@@ -38,14 +38,14 @@ interface InfoItemProps {
 // Reusable component for contact info items with typed props
 const InfoItem = ({ icon: Icon, text }: InfoItemProps) => (
   <div className="flex items-center gap-x-2">
-    <Icon className="text-orange-500" />
+    <Icon className="text-emerald-600" />
     <span>{text}</span>
   </div>
 );
 
-const TopBar = () => {
+const TopBar = () => {  
   return (
-    <header className="bg-[#212121] md:block hidden text-gray-300 text-sm font-light">
+    <header className="bg-blue-700 md:block hidden text-white text-sm font-light">
       <div className="container mx-auto px-4 py-2">
         <div className="flex flex-col md:flex-row justify-between items-center gap-y-3">
           {/* Left Section: Address & Hours */}
