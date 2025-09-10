@@ -6,7 +6,7 @@ const PawIcon = () => (
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-20 h-20 text-orange-300"
+        className="w-20 h-20 text-emerald-300"
     >
         <path
             fillRule="evenodd"
@@ -21,7 +21,7 @@ const PawIcon = () => (
 
 const VeterinaryDoctorProfile = () => {
     return (
-        <div className="bg-[#FEFBF6] min-h-screen flex items-center justify-center p-4 font-sans">
+        <div className=" min-h-screen flex items-center justify-center p-4 font-sans">
             <div className="relative w-full max-w-6xl">
                 {/* Bone shape background */}
                 <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-3/4 bg-[#FDF7EE] rounded-[150px] hidden md:block"></div>
@@ -40,30 +40,30 @@ const VeterinaryDoctorProfile = () => {
                         </div>
 
                         <div className="lg:col-span-2 space-y-8">
-                            <h1 className="text-4xl lg:text-5xl font-semibold text-[#E58F4C]">
+                            <h1 className="text-4xl lg:text-5xl font-semibold text-blue-500">
                                 Veterinary Doctor
                             </h1>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-600">
                                 <div className="space-y-6">
                                     <div className="flex items-center space-x-4">
-                                        <div className="bg-orange-100 p-2 rounded-full">
-                                            <Mail className="text-[#E58F4C]" />
+                                        <div className="bg-emerald-100 p-2 rounded-full">
+                                            <Mail className="text-emerald-500" />
                                         </div>
                                         <div>
                                             <p className="font-semibold">Email</p>
-                                            <a href="mailto:tomasfinn@petzorg.com" className="hover:text-[#E58F4C]">
+                                            <a href="mailto:tomasfinn@petzorg.com" className="hover:text-emerald-500">
                                                 tomasfinn@petzorg.com
                                             </a>
                                         </div>
                                     </div>
                                     <div className="flex items-center space-x-4">
-                                        <div className="bg-orange-100 p-2 rounded-full">
-                                            <Link className="text-[#E58F4C]" />
+                                        <div className="bg-emerald-100 p-2 rounded-full">
+                                            <Link className="text-emerald-500" />
                                         </div>
                                         <div>
                                             <p className="font-semibold">Website</p>
-                                            <a href="https://zozothemes.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#E58F4C]">
+                                            <a href="https://zozothemes.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500">
                                                 https://zozothemes.com
                                             </a>
                                         </div>
@@ -72,8 +72,8 @@ const VeterinaryDoctorProfile = () => {
 
                                 <div className="space-y-6">
                                     <div className="flex items-center space-x-4">
-                                        <div className="bg-orange-100 p-2 rounded-full">
-                                            <Phone className="text-[#E58F4C]" />
+                                        <div className="bg-emerald-100 p-2 rounded-full">
+                                            <Phone className="text-emerald-500" />
                                         </div>
                                         <div>
                                             <p className="font-semibold">Phone</p>
@@ -81,8 +81,8 @@ const VeterinaryDoctorProfile = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center space-x-4">
-                                        <div className="bg-orange-100 p-2 rounded-full">
-                                            <User className="text-[#E58F4C]" />
+                                        <div className="bg-emerald-100 p-2 rounded-full">
+                                            <User className="text-emerald-500" />
                                         </div>
                                         <div>
                                             <p className="font-semibold">Experience</p>
@@ -94,17 +94,17 @@ const VeterinaryDoctorProfile = () => {
 
                             <div className="flex items-center justify-between pt-4">
                                 <div className="flex items-center space-x-3">
-                                    <a href="#" className="bg-orange-100 p-3 rounded-full hover:bg-orange-200 transition-colors">
-                                        <Facebook className="text-[#E58F4C] w-5 h-5" />
+                                    <a href="#" className="bg-emerald-100 p-3 rounded-full hover:bg-emerald-200 transition-colors">
+                                        <Facebook className="text-emerald-500 w-5 h-5" />
                                     </a>
-                                    <a href="#" className="bg-orange-100 p-3 rounded-full hover:bg-orange-200 transition-colors">
-                                        <Twitter className="text-[#E58F4C] w-5 h-5" />
+                                    <a href="#" className="bg-emerald-100 p-3 rounded-full hover:bg-emerald-200 transition-colors">
+                                        <Twitter className="text-emerald-500 w-5 h-5" />
                                     </a>
-                                    <a href="#" className="bg-orange-100 p-3 rounded-full hover:bg-orange-200 transition-colors">
-                                        <Instagram className="text-[#E58F4C] w-5 h-5" />
+                                    <a href="#" className="bg-emerald-100 p-3 rounded-full hover:bg-emerald-200 transition-colors">
+                                        <Instagram className="text-emerald-500 w-5 h-5" />
                                     </a>
-                                    <a href="#" className="bg-orange-100 p-3 rounded-full hover:bg-orange-200 transition-colors">
-                                        <Linkedin className="text-[#E58F4C] w-5 h-5" />
+                                    <a href="#" className="bg-emerald-100 p-3 rounded-full hover:bg-emerald-200 transition-colors">
+                                        <Linkedin className="text-emerald-500 w-5 h-5" />
                                     </a>
                                 </div>
 

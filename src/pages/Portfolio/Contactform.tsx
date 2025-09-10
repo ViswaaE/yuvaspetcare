@@ -7,13 +7,13 @@ const ContactForm = () => {
         <div className="w-full mb-5 max-w-6xl mx-auto px-4 mt-16">
             <div className="bg-[#FDF7EE] rounded-3xl p-8 md:p-12">
                 <div className="flex items-center space-x-2 mb-2">
-                    <span className="bg-[#E58F4C] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center">
+                    <span className="bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center">
                         Contact information
                         <MessageCircle className="w-3 h-3 ml-1.5" />
                     </span>
                 </div>
                 {/* Made the heading font size responsive */}
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-800 mb-8">
                     Let's Discuss With Us
                 </h2>
 
@@ -27,7 +27,7 @@ const ContactForm = () => {
                                 id="name"
                                 required
                                 placeholder="Name *"
-                                className="w-full px-4 py-3 bg-white rounded-xl border-gray-300 focus:ring-[#E58F4C] focus:border-[#E58F4C] transition"
+                                className="w-full px-4 py-3 bg-white rounded-xl border-gray-300 focus:ring-emerald-bg-emerald-500 focus:border-emerald-bg-emerald-500 transition"
                             />
                         </div>
                         <div>
@@ -38,7 +38,7 @@ const ContactForm = () => {
                                 id="email"
                                 required
                                 placeholder="Email *"
-                                className="w-full px-4 py-3 bg-white rounded-xl border-gray-300 focus:ring-[#E58F4C] focus:border-[#E58F4C] transition"
+                                className="w-full px-4 py-3 bg-white rounded-xl border-gray-300 focus:ring-emerald-bg-emerald-500 focus:border-emerald-bg-emerald-500 transition"
                             />
                         </div>
                     </div>
@@ -49,13 +49,13 @@ const ContactForm = () => {
                             id="message"
                             rows={6}
                             placeholder="Message"
-                            className="w-full px-4 py-3 bg-white rounded-xl border-gray-300 focus:ring-[#E58F4C] focus:border-[#E58F4C] transition"
+                            className="w-full px-4 py-3 bg-white rounded-xl border-gray-300 focus:ring-emerald-bg-emerald-500 focus:border-emerald-bg-emerald-500 transition"
                         ></textarea>
                     </div>
                     <div>
                         <button
                             type="submit"
-                            className="px-8 py-3 bg-[#E58F4C] text-white font-semibold rounded-xl hover:bg-orange-500 transition-colors shadow-md"
+                            className="px-8 py-3 bg-emerald-500 text-white font-semibold rounded-xl hover:bg-emerald-500 transition-colors shadow-md"
                         >
                             SEND MESSAGE
                         </button>
