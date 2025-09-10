@@ -34,7 +34,7 @@ const navLinks = [
 // Reusable components (no changes here)
 const Logo = () => (
     <Link href="/" className="flex items-center ml-14 flex-shrink-0">
-        <Image src="/logo.jpeg" alt="Petzorg Logo" width={80} height={80} />
+        <Image src="/logo1.png" alt="Petzorg Logo" width={80} height={80} />
     </Link>
 );
 
