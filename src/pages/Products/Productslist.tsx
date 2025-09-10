@@ -42,7 +42,7 @@ function ProductCard({ product }: ProductCardProps) {
       <div className="relative bg-gray-50 rounded-md">
         {/* Sale Badge */}
         {isSale && (
-          <div className="absolute top-3 left-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
+          <div className="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
             Sale!
           </div>
         )}
@@ -60,7 +60,7 @@ function ProductCard({ product }: ProductCardProps) {
 
 
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button className="bg-orange-500 text-white font-bold py-2 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform">
+          <button className="bg-emerald-500 text-white font-bold py-2 px-6 rounded-md shadow-lg transform hover:scale-105 transition-transform">
             ADD TO CART
           </button>
         </div>
@@ -74,7 +74,7 @@ function ProductCard({ product }: ProductCardProps) {
             {isSale ? (
               <>
                 <span className="text-gray-400 line-through mr-2">${product.price.toFixed(2)}</span>
-                <span className="font-bold text-orange-600">${product.salePrice?.toFixed(2)}</span>
+                <span className="font-bold text-emerald-600">${product.salePrice?.toFixed(2)}</span>
               </>
             ) : (
               <span className="font-bold text-gray-700">${product.price.toFixed(2)}</span>

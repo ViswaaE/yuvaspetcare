@@ -12,7 +12,7 @@ export default function ProductTabs({ description, additionalInfo }: ProductTabs
   const [activeTab, setActiveTab] = useState<'description' | 'info'>('description');
 
   const tabButtonStyles = "px-6 py-2 rounded-t-md font-semibold";
-  const activeStyles = "bg-orange-500 text-white";
+  const activeStyles = "bg-emerald-500 text-white";
   const inactiveStyles = "bg-gray-800 text-white";
 
   return (

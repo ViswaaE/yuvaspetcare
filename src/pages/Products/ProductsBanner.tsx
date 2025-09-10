@@ -13,7 +13,7 @@ const BoneIcon = () => (
         strokeWidth="1.5" 
         strokeLinecap="round" 
         strokeLinejoin="round" 
-        className="text-orange-300"
+        className="text-emerald-300"
         style={{ filter: "drop-shadow(0 0 5px rgba(252, 211, 77, 0.8))" }}
     >
         <path d="M12 2a5.5 5.5 0 0 1 5.5 5.5c0 1.63-.73 3.07-1.86 4.02l-1.35 1.18a1 1 0 0 0 0 1.6l1.35 1.18c1.13.95 1.86 2.39 1.86 4.02A5.5 5.5 0 0 1 12 22a5.5 5.5 0 0 1-5.5-5.5c0-1.63.73-3.07 1.86-4.02l1.35-1.18a1 1 0 0 0 0-1.6L6.64 8.52C5.51 7.57 4.78 6.13 4.78 4.5A5.5 5.5 0 0 1 12 2z"/>

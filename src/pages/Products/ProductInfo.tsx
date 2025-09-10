@@ -19,7 +19,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         {product.salePrice ? (
           <>
             <span className="text-gray-400 line-through mr-3">${product.price.toFixed(2)}</span>
-            <span className="font-bold text-orange-600">${product.salePrice.toFixed(2)}</span>
+            <span className="font-bold text-emerald-600">${product.salePrice.toFixed(2)}</span>
           </>
         ) : (
           <span className="font-bold text-gray-800">${product.price.toFixed(2)}</span>
@@ -50,7 +50,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
           className="w-20 p-3 border border-gray-300 rounded-md text-center"
           min="1"
         />
-        <button className="flex-1 bg-orange-500 text-white font-bold py-3 px-8 rounded-md hover:bg-orange-600 transition-colors">
+        <button className="flex-1 bg-emerald-500 text-white font-bold py-3 px-8 rounded-md hover:bg-emerald-600 transition-colors">
           ADD TO CART
         </button>
       </div>

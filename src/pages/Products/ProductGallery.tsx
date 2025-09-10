@@ -28,7 +28,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
           <button
             key={image.id}
             onClick={() => setSelectedImage(image)}
-            className={`p-1 border-2 rounded-lg ${selectedImage.id === image.id ? 'border-orange-500' : 'border-transparent'}`}
+            className={`p-1 border-2 rounded-lg ${selectedImage.id === image.id ? 'border-emerald-500' : 'border-transparent'}`}
           >
             <Image
               src={image.url}
@@ -42,7 +42,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
       </div>
 
       {/* Main Image */}
-      <div className="relative flex-1 border-2 border-orange-400 rounded-xl p-4">
+      <div className="relative flex-1 border-2 border-emerald-500 rounded-xl p-4">
         <Image
           src={selectedImage.url}
           alt={selectedImage.alt}
@@ -50,7 +50,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
           height={500}
           className="w-full h-auto object-contain rounded-lg"
         />
-        <button className="absolute top-4 right-4 text-gray-600 hover:text-black">
+        <button className="absolute top-4 right-4 text-blue-600 hover:text-black">
           <ZoomIcon />
         </button>
       </div>

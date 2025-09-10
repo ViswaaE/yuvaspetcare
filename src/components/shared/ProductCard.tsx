@@ -12,7 +12,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="group text-center border border-gray-200 rounded-xl p-4 transition-shadow duration-300 hover:shadow-xl">
       <div className="relative bg-gray-50 rounded-lg overflow-hidden">
         {isSale && (
-          <div className="absolute top-3 left-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
+          <div className="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
             Sale!
           </div>
         )}
@@ -30,7 +30,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {isSale ? (
             <>
               <span className="text-gray-400 line-through mr-2">${product.price.toFixed(2)}</span>
-              <span className="font-bold text-orange-600">${product.salePrice?.toFixed(2)}</span>
+              <span className="font-bold text-emerald-600">${product.salePrice?.toFixed(2)}</span>
             </>
           ) : (
             <span className="font-bold text-gray-700">${product.price.toFixed(2)}</span>
