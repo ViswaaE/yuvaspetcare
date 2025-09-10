@@ -27,9 +27,9 @@ const ContactSection = () => {
         <section className="bg-white py-20 font-sans relative overflow-hidden">
             {/* Decorative Paw Prints - Top Left */}
             <div className="absolute top-10 left-10 opacity-30 hidden lg:block">
-                 <PawIcon className="w-16 h-16 text-orange-400 transform -rotate-12" />
-                 <PawIcon className="w-12 h-12 text-orange-400 ml-20 mt-4 transform rotate-6" />
-                 <PawIcon className="w-8 h-8 text-orange-400 ml-8 mt-8 transform -rotate-12" />
+                 <PawIcon className="w-16 h-16 text-emerald-400 transform -rotate-12" />
+                 <PawIcon className="w-12 h-12 text-emerald-400 ml-20 mt-4 transform rotate-6" />
+                 <PawIcon className="w-8 h-8 text-emerald-400 ml-8 mt-8 transform -rotate-12" />
             </div>
 
             {/* Decorative Paws with Hearts - Bottom Right */}
@@ -42,10 +42,10 @@ const ContactSection = () => {
             <div className="container mx-auto max-w-5xl px-8 z-10 relative">
                 <div className="text-center mb-16">
                      <div className="flex items-center justify-center gap-2 mb-2">
-                        <span className="text-orange-500 font-semibold">We Love Your Pets</span>
-                        <PawIcon className="w-5 h-5 text-orange-400" />
+                        <span className="text-emerald-500 font-semibold">We Love Your Pets</span>
+                        <PawIcon className="w-5 h-5 text-emerald-400" />
                     </div>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-800">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-blue-800">
                         Get in Touch
                     </h2>
                     <p className="text-gray-600 mt-4 max-w-xl mx-auto">
@@ -55,7 +55,7 @@ const ContactSection = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center">
                     <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
+                        <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4">
                             <PhoneIcon />
                         </div>
                         <h3 className="font-bold text-xl text-gray-800 mb-2">Phone</h3>
@@ -63,7 +63,7 @@ const ContactSection = () => {
                         <p className="text-gray-600">+55(8) 656-7591</p>
                     </div>
                      <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
+                        <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4">
                             <EmailIcon />
                         </div>
                         <h3 className="font-bold text-xl text-gray-800 mb-2">Email</h3>
@@ -71,7 +71,7 @@ const ContactSection = () => {
                         <p className="text-gray-600">info@example.com</p>
                     </div>
                      <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
+                        <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4">
                             <AddressIcon />
                         </div>
                         <h3 className="font-bold text-xl text-gray-800 mb-2">Address</h3>
@@ -83,16 +83,16 @@ const ContactSection = () => {
                 <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-xl max-w-4xl mx-auto border border-gray-100">
                      <form>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Name *" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300" />
-                            <input type="tel" placeholder="Phone" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300" />
-                            <input type="email" placeholder="Email *" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300" />
-                            <input type="text" placeholder="Subject *" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300" />
+                            <input type="text" placeholder="Name *" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300" />
+                            <input type="tel" placeholder="Phone" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300" />
+                            <input type="email" placeholder="Email *" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300" />
+                            <input type="text" placeholder="Subject *" className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300" />
                         </div>
                         <div className="mt-6">
-                            <textarea placeholder="Message" rows={5} className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300"></textarea>
+                            <textarea placeholder="Message" rows={5} className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300"></textarea>
                         </div>
                         <div className="text-center mt-8">
-                            <button type="submit" className="bg-orange-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                            <button type="submit" className="bg-emerald-500 text-white font-bold py-3 px-8 rounded-full hover:bg-emerald-600 transition-colors duration-300">
                                 SEND MESSAGE
                             </button>
                         </div>
