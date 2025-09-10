@@ -45,20 +45,20 @@ const servicesData: Service[] = [
 const ReadMoreButton: React.FC = () => (
   <div className="relative group/button">
     {/* Center rectangle */}
-    <div className="bg-orange-500 text-white font-bold py-2 px-5 rounded-full z-10 shadow-lg transition-all duration-300">
+    <div className="bg-emerald-500 text-white font-bold py-2 px-5 rounded-full z-10 shadow-lg transition-all duration-300">
       READ MORE
     </div>
 
     {/* Left side circles */}
     <div className="absolute top-1/2 left-0 -translate-x-1/4 -translate-y-1/2 flex flex-col transition-transform duration-300 transform scale-0 group-hover/button:scale-100 origin-right">
-      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
-      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
+      <div className="w-8 h-8 bg-emerald-500 rounded-full"></div>
+      <div className="w-8 h-8 bg-emerald-500 rounded-full"></div>
     </div>
     
     {/* Right side circles */}
     <div className="absolute top-1/2 right-0 translate-x-1/4 -translate-y-1/2 flex flex-col transition-transform duration-300 transform scale-0 group-hover/button:scale-100 origin-left">
-      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
-      <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
+      <div className="w-8 h-8 bg-emerald-500 rounded-full"></div>
+      <div className="w-8 h-8 bg-emerald-500 rounded-full"></div>
     </div>
   </div>
 );
@@ -82,7 +82,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
+        <h3 className="text-xl font-bold text-blue-800 mb-2">{service.title}</h3>
         <p className="text-gray-600 leading-relaxed">{service.description}</p>
       </div>
     </div>
