@@ -37,7 +37,7 @@ const TestimonialCard = ({ name, text, imageUrl, rotation }: { name: string, tex
             <div className="flex items-center gap-4">
                 <img src={imageUrl} alt={name} className="w-14 h-14 rounded-full object-cover" />
                 <div>
-                    <h3 className="font-bold text-orange-500">{name}</h3>
+                    <h3 className="font-bold text-emerald-500">{name}</h3>
                 </div>
             </div>
             <QuoteIcon />
@@ -55,10 +55,10 @@ const Abouttestimonial = () => {
             <div className="container mx-auto max-w-7xl px-8">
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                        <span className="text-orange-500 font-semibold">Our Testimonial</span>
-                        <PawIcon className="w-5 h-5 text-orange-400" />
+                        <span className="text-emerald-500 font-semibold">Our Testimonial</span>
+                        <PawIcon className="w-5 h-5 text-emerald-400" />
                     </div>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-800">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-blue-800">
                         Here from Our Happy Pet Owners.
                     </h2>
                 </div>

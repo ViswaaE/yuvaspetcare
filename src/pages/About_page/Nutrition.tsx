@@ -50,7 +50,7 @@ const RotatingTextCircle = () => (
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-inner">
-                 <PawIcon className="w-8 h-8 text-orange-400" />
+                 <PawIcon className="w-8 h-8 text-emerald-400" />
             </div>
         </div>
     </div>
@@ -82,17 +82,17 @@ const NutritionServices = () => {
             {/* Right Column: Text Content */}
             <div className="flex flex-col items-start">
                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-orange-500 font-semibold">About Us</span>
-                    <PawIcon className="w-5 h-5 text-orange-400" />
+                    <span className="text-emerald-500 font-semibold">About Us</span>
+                    <PawIcon className="w-5 h-5 text-emerald-400" />
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+                <h2 className="text-4xl lg:text-5xl font-bold text-blue-800 mb-4 leading-tight">
                     Making Your Home<br/>Good Nutrition
                 </h2>
                 <p className="text-gray-600 mb-8 max-w-md">
                     This is the most common type of veterinary practice, focusing on the health and well-being of pets like dogs and cats. Rabbits, guinea pigs, hamsters, ferrets, and other small pets. non-traditional pets such as birds, reptiles, and amphibians.
                 </p>
                 <div className="flex items-center gap-12">
-                     <button className="bg-orange-400 text-white font-bold py-3 px-6 rounded-full hover:bg-orange-500 transition-all shadow-md flex items-center gap-2">
+                     <button className="bg-emerald-400 text-white font-bold py-3 px-6 rounded-full hover:bg-emerald-500 transition-all shadow-md flex items-center gap-2">
                         CONTACT US
                         <PawIcon className="w-5 h-5" />
                     </button>
@@ -106,19 +106,19 @@ const NutritionServices = () => {
       <section className="bg-white py-12">
         <div className="container mx-auto max-w-7xl px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-orange-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
+                <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-emerald-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
                     <PawIcon className="w-6 h-6 text-white"/>
                     <span>Pet Caring</span>
                 </a>
-                <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-orange-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
+                <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-emerald-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
                     <TrainingIcon className="text-white w-6 h-6"/>
                     <span>Pet Training</span>
                 </a>
-                 <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-orange-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
+                 <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-emerald-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
                     <BoardingIcon className="text-white w-6 h-6"/>
                     <span>Pet Boarding</span>
                 </a>
-                <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-orange-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
+                <a href="#" className="flex items-center justify-center gap-4 bg-[#4a4a4a] text-emerald-500 font-bold px-6 py-4 rounded-full hover:bg-gray-700 transition-colors">
                     <VeterinaryIcon className="text-white w-6 h-6"/>
                     <span>Veterinary</span>
                 </a>

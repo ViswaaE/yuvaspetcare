@@ -42,7 +42,7 @@ const TeamMemberCard = ({ name, role, imageUrl }: { name: string, role: string, 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out bg-black/50 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold text-orange-400">{name}</h3>
+            <h3 className="text-2xl font-bold text-emerald-400">{name}</h3>
             <p className="text-white text-sm mb-4">{role}</p>
             <div className="flex space-x-3">
                 <a href="#" className="w-8 h-8 rounded-full bg-white flex items-center justify-center group-hover:bg-opacity-90 transition-opacity"><FacebookIcon /></a>
@@ -58,14 +58,14 @@ const TeamMemberCard = ({ name, role, imageUrl }: { name: string, role: string, 
 // Main TeamSection Component
 const TeamSection = () => {
     return (
-        <section className="bg-[#fdf9f4] py-20 font-sans">
+        <section className="bg-blue-50 py-20 font-sans">
             <div className="container mx-auto max-w-7xl px-8">
                 <div className="text-center mb-12">
                      <div className="flex items-center justify-center gap-2 mb-2">
-                        <span className="text-orange-500 font-semibold">Our Specialists</span>
-                         <PawIcon className="w-5 h-5 text-orange-400" />
+                        <span className="text-emerald-500 font-semibold">Our Specialists</span>
+                         <PawIcon className="w-5 h-5 text-emerald-400" />
                     </div>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-800">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-blue-800">
                         Meet Our Experience Pet Care Team
                     </h2>
                 </div>
