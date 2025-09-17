@@ -1,24 +1,44 @@
-'use client'; // This component needs to use state, so it's a client component
+'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
 import { ProductDetail } from '@/types';
 
 type ProductGalleryProps = {
-  images: ProductDetail['images'];
+  images?: ProductDetail['images']; // optional
 };
 
 // SVG for the zoom icon
 const ZoomIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <circle cx="11" cy="11" r="8"></circle>
     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
   </svg>
 );
 
-
 export default function ProductGallery({ images }: ProductGalleryProps) {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const hasImages = images && images.length > 0;
+  const [selectedImage, setSelectedImage] = useState(
+    hasImages ? images[0] : null
+  );
+
+  if (!hasImages || !selectedImage) {
+    return (
+      <div className="w-full p-6 text-center text-gray-500 border border-gray-300 rounded-lg">
+        No product images available.
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col-reverse md:flex-row gap-4">
@@ -28,7 +48,10 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
           <button
             key={image.id}
             onClick={() => setSelectedImage(image)}
-            className={`p-1 border-2 rounded-lg ${selectedImage.id === image.id ? 'border-emerald-500' : 'border-transparent'}`}
+            className={`p-1 border-2 rounded-lg ${selectedImage.id === image.id
+                ? 'border-emerald-500'
+                : 'border-transparent'
+              }`}
           >
             <Image
               src={image.url}

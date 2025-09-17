@@ -4,11 +4,15 @@ import { useState } from 'react';
 import { ProductDetail } from '@/types';
 
 type ProductInfoProps = {
-  product: ProductDetail;
+  product?: ProductDetail | null; // <-- make it optional
 };
 
 export default function ProductInfo({ product }: ProductInfoProps) {
   const [quantity, setQuantity] = useState(1);
+
+  if (!product) {
+    return <p className="text-gray-500">Product not found or still loading.</p>;
+  }
 
   return (
     <div>
@@ -18,11 +22,17 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       <p className="text-3xl mb-4">
         {product.salePrice ? (
           <>
-            <span className="text-gray-400 line-through mr-3">${product.price.toFixed(2)}</span>
-            <span className="font-bold text-emerald-600">${product.salePrice.toFixed(2)}</span>
+            <span className="text-gray-400 line-through mr-3">
+              ${product.price?.toFixed(2)}
+            </span>
+            <span className="font-bold text-emerald-600">
+              ${product.salePrice?.toFixed(2)}
+            </span>
           </>
         ) : (
-          <span className="font-bold text-gray-800">${product.price.toFixed(2)}</span>
+          <span className="font-bold text-gray-800">
+            ${product.price?.toFixed(2)}
+          </span>
         )}
       </p>
 
@@ -33,7 +43,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       <div className="mb-6">
         <h3 className="text-xl font-bold mb-2">Highlights:</h3>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
-          {product.highlights.map((highlight, index) => (
+          {product.highlights?.map((highlight, index) => (
             <li key={index}>{highlight}</li>
           ))}
         </ul>
@@ -46,7 +56,9 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         <input
           type="number"
           value={quantity}
-          onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+          onChange={(e) =>
+            setQuantity(Math.max(1, parseInt(e.target.value) || 1))
+          }
           className="w-20 p-3 border border-gray-300 rounded-md text-center"
           min="1"
         />
@@ -58,7 +70,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       {/* Meta Info */}
       <div className="text-sm text-gray-500">
         <p><strong>SKU:</strong> {product.sku}</p>
-        <p><strong>Categories:</strong> {product.categories.join(', ')}</p>
+        <p><strong>Categories:</strong> {product.categories?.join(', ')}</p>
       </div>
     </div>
   );
