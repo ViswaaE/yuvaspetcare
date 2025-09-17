@@ -10,6 +10,7 @@ interface PageProps {
   params: {
     slug: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 // --- Your dummy data ---
@@ -63,21 +64,16 @@ export default function ProductPage({ params }: PageProps) {
   return (
     <div className="bg-white">
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Top section */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <ProductGallery images={productData.images} />
           <ProductInfo product={productData} />
         </section>
-
-        {/* Tabs */}
         <section className="mb-16">
           <ProductTabs
             description={productData.longDescription}
             additionalInfo={productData.additionalInfo}
           />
         </section>
-
-        {/* Related Products */}
         <section>
           <RelatedProducts products={relatedProductsData} />
         </section>
@@ -85,6 +81,7 @@ export default function ProductPage({ params }: PageProps) {
     </div>
   );
 }
+
 
 // ✅ Optional: Dynamic <title>
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
