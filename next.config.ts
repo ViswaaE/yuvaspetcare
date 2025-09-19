@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // 👈 enables static HTML export
-  basePath: "/yuvaspetcare", // 👈 replace with your repo name
+  output: "export",
+  basePath: "/yuvaspetcare",
+  assetPrefix: "/yuvaspetcare/",
   images: {
-    unoptimized: true, // GitHub Pages doesn't support Next.js image optimization
+    unoptimized: true,
   },
 };
-
-export default nextConfig;

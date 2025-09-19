@@ -11,13 +11,12 @@ const HeroSection = () => {
             {/* Background Image using next/image for optimization */}
             {/* --- Mobile Image --- */}
             {/* This image is visible by default and gets hidden on medium screens and larger (md:hidden) */}
-            <Image
-                src="/heroimg.png" // <-- Your image optimized for mobile
+            import Image from "next/image";
+
+            <img
+                src="https://drvets.s3.us-east-1.amazonaws.com/heroimg.png"
                 alt="A cute puppy being held"
-                layout="fill"
-                objectFit="cover"
-                quality={85}
-                className="brightness-100 md:hidden" // Toggles visibility
+                className="w-full h-full object-cover brightness-100 md:hidden"
             />
 
             {/* --- Desktop Image --- */}
